@@ -1,15 +1,10 @@
-import { User } from '@clerk/nextjs/server'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { UserButton } from '@clerk/nextjs'
 import { ModeToggle } from '@/components/global/mode-toggle'
 
-type Props = {
-    user?: null | User
-}
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <div className='p-4 flex items-center justify-between relative'>
         <aside className='flex items-center gap-2'>
@@ -19,7 +14,7 @@ const Navbar = (props: Props) => {
                 width={40}
                 height={40}
             />
-            <span className='text-xl font-bold'>ezWeb.</span>
+            <span className='text-xl font-bold'>ezScheme.</span>
             </aside>
             <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
                 <ul className="flex items-center justify-center gap-8">
@@ -33,7 +28,7 @@ const Navbar = (props: Props) => {
                 <Link href={'/agency'} className='bg-violet-500 text-white p-2 px-4 rounded-md hover:bg-violet-800'>
                     Sign In
                 </Link>
-                <UserButton />
+            
                 <ModeToggle />
             </aside>
        
