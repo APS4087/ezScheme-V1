@@ -7,12 +7,22 @@ body {
   height: 100vh;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+.aspect-w-16 {
+  aspect-ratio: 16 / 9;
+}
 
+.aspect-h-9 {
+  aspect-ratio: 16 / 9;
+}
 /* 
 R (0)
 G (110)
