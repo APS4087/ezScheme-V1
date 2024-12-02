@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 import Navbar from "@/components/site/navigation";
+import Footer from "@/components/site/footer/footer";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         disableTransitionOnChange>
         <Navbar />
         {children}
+        <Footer />
       </ThemeProvider>
       </body>
     </html>
