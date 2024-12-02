@@ -8,12 +8,13 @@ import HeroSection from "@/components/site/landingComponents/HeroSection";
 import FeaturesSection from "@/components/site/landingComponents/FeaturesSection";
 import PricingSection from "@/components/site/landingComponents/PricingSection";
 import FAQSection from "@/components/site/landingComponents/FAQSection";
+import AboutSection from "@/components/site/landingComponents/AboutSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionWrapper = ({ children }) => {
+const SectionWrapper = ({ children, id }) => {
   return (
-    <div className="section-wrapper">
+    <div id={id} className="section-wrapper">
       {children}
     </div>
   );
@@ -41,16 +42,19 @@ export default function Home() {
 
   return (
     <>
-      <SectionWrapper>
+      <SectionWrapper id="hero">
         <HeroSection />
       </SectionWrapper>
-      <SectionWrapper>
+      {/* <SectionWrapper id="about">
+        <AboutSection />
+      </SectionWrapper> */}
+      <SectionWrapper id="features">
         <FeaturesSection />
       </SectionWrapper>
-      <SectionWrapper>
+      <SectionWrapper id="pricing">
         <PricingSection />
       </SectionWrapper>
-      <SectionWrapper>
+      <SectionWrapper id="faq">
         <FAQSection />
       </SectionWrapper>
     </>

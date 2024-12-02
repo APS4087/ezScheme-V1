@@ -40,7 +40,7 @@ export default function FeaturesSection() {
               <CardDescription>Get personalized video content tailored to your needs.</CardDescription>
             </CardHeader>
             <CardContent className="flex justify-center items-center">
-              <video width="500" height="281" controls autoPlay loop muted playsInline>
+              <video width="500" height="281" autoPlay loop muted playsInline>
                 <source src="/assets/videoGenerationDemo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -58,7 +58,7 @@ export default function FeaturesSection() {
               <CardDescription>Ask detailed queries and get instant responses.</CardDescription>
             </CardHeader>
             <CardContent className="flex justify-center items-center">
-              <video width="500" height="281" controls autoPlay loop muted playsInline>
+              <video width="500" height="281" autoPlay loop muted playsInline>
                 <source src="/assets/virtualAssitantDemo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -76,7 +76,7 @@ export default function FeaturesSection() {
               <CardDescription>Identify relevant schemes based on your input.</CardDescription>
             </CardHeader>
             <CardContent className="flex justify-center items-center">
-              <video width="500" height="281" controls autoPlay loop muted playsInline>
+              <video width="500" height="281" autoPlay loop muted playsInline>
                 <source src="/assets/recommendationDemo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
