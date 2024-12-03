@@ -35,14 +35,20 @@ const Preloader = () => {
     function updateColors(progress: number) {
       const stage = Math.floor(progress / (100 / (colorStages.length - 1)));
       if (stage < colorStages.length) {
-        document.querySelector(".preloader").style.backgroundColor =
-          colorStages[stage].bg;
-        document.querySelector(".progress-bar").style.backgroundColor =
-          colorStages[stage].text;
+        const preloader = document.querySelector(".preloader");
+        const progressBar = document.querySelector(".progress-bar");
+        if (preloader) {
+          preloader.style.backgroundColor = colorStages[stage].bg;
+        }
+        if (progressBar) {
+          progressBar.style.backgroundColor = colorStages[stage].text;
+        }
         document
           .querySelectorAll(".loading-text .char, .percentage")
           .forEach((el) => {
-            el.style.color = colorStages[stage].text;
+            if (el) {
+              el.style.color = colorStages[stage].text;
+            }
           });
       }
     }
@@ -55,7 +61,10 @@ const Preloader = () => {
       ease: "power1.inOut",
       onUpdate: function () {
         const progress = Math.round(this.progress() * 100);
-        document.querySelector(".percentage").textContent = progress.toString();
+        const percentage = document.querySelector(".percentage");
+        if (percentage) {
+          percentage.textContent = progress.toString();
+        }
         updateColors(progress);
       }
     })
