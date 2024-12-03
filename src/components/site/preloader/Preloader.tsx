@@ -32,7 +32,7 @@ const Preloader = () => {
       { bg: "rgb(0, 0, 0)", text: "rgb(230, 225, 215)" } // End with black
     ];
 
-    function updateColors(progress) {
+    function updateColors(progress: number) {
       const stage = Math.floor(progress / (100 / (colorStages.length - 1)));
       if (stage < colorStages.length) {
         document.querySelector(".preloader").style.backgroundColor =
@@ -55,7 +55,7 @@ const Preloader = () => {
       ease: "power1.inOut",
       onUpdate: function () {
         const progress = Math.round(this.progress() * 100);
-        document.querySelector(".percentage").textContent = progress;
+        document.querySelector(".percentage").textContent = progress.toString();
         updateColors(progress);
       }
     })
