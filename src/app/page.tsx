@@ -1,7 +1,7 @@
 // FILE: page.tsx
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import HeroSection from "@/components/site/landingComponents/HeroSection";
@@ -13,7 +13,12 @@ import Countdown from '@/components/site/landingComponents/Countdown';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionWrapper = ({ children, id }) => {
+interface SectionWrapperProps {
+  children: ReactNode;
+  id: string;
+}
+
+const SectionWrapper = ({ children, id }: SectionWrapperProps) => {
   return (
     <div id={id} className="section-wrapper">
       {children}
