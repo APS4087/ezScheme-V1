@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center relative">
         <aside className="flex items-center gap-2">
           <Image 
-            src='/assets/ezWebLogo.svg'
+            src='/assets/ezSchemeLogo.svg'
             alt='ezWeb Logo'
             width={40}
             height={40}
