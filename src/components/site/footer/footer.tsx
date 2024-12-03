@@ -17,13 +17,13 @@ export default function Footer() {
         </aside>
         <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
           <ul className="flex items-center justify-center gap-8">
-            <Link href="/about" className="hover:text-gray-800 dark:hover:text-white">About Us</Link>
-            <Link href="/contact" className="hover:text-gray-800 dark:hover:text-white">Contact</Link>
-            <Link href="/privacy" className="hover:text-gray-800 dark:hover:text-white">Privacy Policy</Link>
+            <Link href="/" className="hover:text-gray-800 dark:hover:text-white">About Us</Link>
+            <Link href="/" className="hover:text-gray-800 dark:hover:text-white">Contact</Link>
+            <Link href="/" className="hover:text-gray-800 dark:hover:text-white">Privacy Policy</Link>
           </ul>
         </nav>
         <div className="mt-4 md:mt-0">
-          <p className="text-gray-500 dark:text-gray-400">&copy; 2023 ezScheme. All rights reserved.</p>
+          <p className="text-gray-500 dark:text-gray-400">&copy; 2024 ezScheme. All rights reserved.</p>
         </div>
       </div>
     </footer>
