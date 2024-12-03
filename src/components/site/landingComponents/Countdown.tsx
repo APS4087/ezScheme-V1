@@ -80,7 +80,7 @@ export default function Countdown() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+        {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
       </motion.div>
       <motion.div 
         className="mt-12"
