@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className='p-4 flex items-center justify-between relative'>
       <aside className='flex items-center gap-2'>
         <Image 
-          src='/assets/ezWebLogo.svg'
+          src='/assets/ezSchemeLogo.svg'
           alt='ezWeb Logo'
           width={40}
           height={40}

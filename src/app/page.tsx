@@ -9,6 +9,7 @@ import FeaturesSection from "@/components/site/landingComponents/FeaturesSection
 import PricingSection from "@/components/site/landingComponents/PricingSection";
 import FAQSection from "@/components/site/landingComponents/FAQSection";
 import AboutSection from "@/components/site/landingComponents/AboutSection";
+import Countdown from '@/components/site/landingComponents/Countdown';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,9 +46,6 @@ export default function Home() {
       <SectionWrapper id="hero">
         <HeroSection />
       </SectionWrapper>
-      {/* <SectionWrapper id="about">
-        <AboutSection />
-      </SectionWrapper> */}
       <SectionWrapper id="features">
         <FeaturesSection />
       </SectionWrapper>
@@ -56,6 +54,9 @@ export default function Home() {
       </SectionWrapper>
       <SectionWrapper id="faq">
         <FAQSection />
+      </SectionWrapper>
+      <SectionWrapper id="countdown">
+        <Countdown />
       </SectionWrapper>
     </>
   );

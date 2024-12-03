@@ -40,14 +40,14 @@ export default function PricingSection() {
             variants={cardVariants}
             transition={{ duration: 0.5, delay: 0.2 * index }}
           >
-            <Card className={clsx('flex flex-col justify-between', {'border-2 border-violet-600' : card.title === 'Unlimited Saas',})}>
+            <Card className={clsx('flex flex-col justify-between', {'border-2 border-violet-600' : card.title === 'Premium Plan',})}>
               <CardHeader>
-                <CardTitle className={clsx('', {'text-muted-foreground' : card.title !== 'Unlimited Saas',})}>{card.title}</CardTitle>
+                <CardTitle className={clsx('', {'text-muted-foreground' : card.title !== 'Premium Plan',})}>{card.title}</CardTitle>
                 <CardDescription>{card.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <span className="text-4xl font-bold">{card.price}</span>
-                <span className="text-muted-foreground">/month</span>
+                <span className="text-muted-foreground">/{card.duration}</span>
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-4">
                 <div>
@@ -58,7 +58,7 @@ export default function PricingSection() {
                     </div>
                   ))}
                 </div>
-                <Link href={`/agency?plan=${card.priceId}`} className={clsx('w-full text-center bg-violet-600 p-2 rounded-md', {'!bg-muted-foreground' : card.title === 'Unlimited Saas',})}>
+                <Link href={`/agency?plan=${card.priceId}`} className={clsx('w-full text-center bg-violet-600 p-2 rounded-md', {'!bg-muted-foreground' : card.title === 'Premium Plan',})}>
                   Get Started
                 </Link>
               </CardFooter>
