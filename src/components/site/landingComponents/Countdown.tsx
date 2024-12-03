@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const calculateTimeLeft = () => {
   const difference = +new Date('2025-01-01') - +new Date();
-  let timeLeft = {};
+  let timeLeft: { [key: string]: number } = {};
 
   if (difference > 0) {
     timeLeft = {
@@ -31,7 +31,7 @@ export default function Countdown() {
     return () => clearTimeout(timer);
   }, [timeLeft]);
 
-  const timerComponents = [];
+  const timerComponents: JSX.Element[] = [];
 
   Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval]) {
