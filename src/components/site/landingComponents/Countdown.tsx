@@ -88,7 +88,7 @@ export default function Countdown() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <a href="mailto:info@ezscheme.com" className="bg-violet-600 text-white py-3 px-6 rounded-full hover:bg-primary-dark transition">
+        <a href="mailto:aungpyaesoe.bgs@gmail.com" className="bg-violet-600 text-white py-3 px-6 rounded-full hover:bg-primary-dark transition">
           Contact Us
         </a>
       </motion.div>
