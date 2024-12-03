@@ -4,8 +4,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
 
-const Paragraph = ({ paragraph }) => {
-  const container = useRef(null);
+interface ParagraphProps {
+  paragraph: string;
+}
+
+const Paragraph = ({ paragraph }: ParagraphProps) => {
+  const container = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start 0.75", "start 0.1"]
@@ -23,7 +27,13 @@ const Paragraph = ({ paragraph }) => {
   );
 };
 
-const Word = ({ children, progress, range }) => {
+interface WordProps {
+  children: React.ReactNode;
+  progress: any;
+  range: [number, number];
+}
+
+const Word = ({ children, progress, range }: WordProps) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="relative mr-3 mt-3">
