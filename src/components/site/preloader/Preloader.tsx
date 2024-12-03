@@ -35,8 +35,8 @@ const Preloader = () => {
     function updateColors(progress: number) {
       const stage = Math.floor(progress / (100 / (colorStages.length - 1)));
       if (stage < colorStages.length) {
-        const preloader = document.querySelector(".preloader");
-        const progressBar = document.querySelector(".progress-bar");
+        const preloader = document.querySelector(".preloader") as HTMLElement;
+        const progressBar = document.querySelector(".progress-bar") as HTMLElement;
         if (preloader) {
           preloader.style.backgroundColor = colorStages[stage].bg;
         }
@@ -46,7 +46,7 @@ const Preloader = () => {
         document
           .querySelectorAll(".loading-text .char, .percentage")
           .forEach((el) => {
-            if (el) {
+            if (el instanceof HTMLElement) {
               el.style.color = colorStages[stage].text;
             }
           });
@@ -61,7 +61,7 @@ const Preloader = () => {
       ease: "power1.inOut",
       onUpdate: function () {
         const progress = Math.round(this.progress() * 100);
-        const percentage = document.querySelector(".percentage");
+        const percentage = document.querySelector(".percentage") as HTMLElement;
         if (percentage) {
           percentage.textContent = progress.toString();
         }
